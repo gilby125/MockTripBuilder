@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="container">
+    <%= form_for(@post) do |f| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <%= f.label :email_address %>
+          <%= f.text_field :email_address, class: 'form-control' %>
+          <br>
+
+          <%= f.label :itinerary_reference %>
+          <%= f.text_field :itinerary_reference, class: 'form-control' %>
+          <br>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+          <br>
+
+          <%= f.label :airline_code %>
+          <%= f.text_field :airline_code, class: 'form-control' %>
+          <br>
+
+          <%= f.label :confirmation_number %>
+          <%= f.text_field :confirmation_number, class: 'form-control' %>
+          <br>
+
+          <%= f.label :flight_number %>
+          <%= f.text_field :flight_number, class: 'form-control' %>
+          <br>
+
+          <%= f.label :departure_airport %>
+          <%= f.text_field :departure_airport, class: 'form-control' %>
+          <br>
+
+          <%= f.label :arrival_airport %>
+          <%= f.text_field :arrival_airport, class: 'form-control' %>
+          <br>
+
+          <%= f.label :departure_date_time %>
+          <br> use format: [2016-12-31T09:30:00.000Z]
+          <%= f.text_field :departure_date_time, class: 'form-control' %>
+          <br>
+          
+          <%= f.label :arrival_date_time %>
+          <br> use format: [2016-12-31T21:30:00.000Z]
+          <%= f.text_field :arrival_date_time, class: 'form-control' %>
+          <br>
+
+
+
+        </div>
+      </div>
+
+      <div class="actions">
+        <br><br>
+          <%= f.submit "Create XML", class: "btn btn-primary btn-lg" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
