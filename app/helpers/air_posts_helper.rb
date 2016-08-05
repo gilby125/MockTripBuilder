@@ -1,0 +1,2 @@
+module AirPostsHelper
+end

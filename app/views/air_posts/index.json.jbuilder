@@ -1,0 +1,1 @@
+json.array! @air_posts, partial: 'air_posts/air_post', as: :air_post

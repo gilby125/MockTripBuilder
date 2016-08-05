@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  --------->
+  <%= link_to 'New Air Post', new_air_post_path, class: "btn btn-info btn-lg"  %>
+  <---------
+</div>
+<hr>
+<div class="container">
+<h3>previous air_posts</h3>
+<% @air_posts.each do |air_post| %>
+<div class="col-lg-8">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+          <%= air_post.departure_airport %> - <%= air_post.arrival_airport %>
+      </div>
+      <div class="panel-body">
+        <ul>
+  
+        <li>email_address: <strong><%= air_post.email_address %></strong></li>
+        <li>itinerary_reference: <strong><%= air_post.itinerary_reference %></strong></li>
+        <li>name: <strong><%= air_post.name %></strong></li>
+        <li>airline_code: <strong><%= air_post.airline_code %></strong></li>
+        <li>confirmation_number: <strong><%= air_post.confirmation_number %></strong></li>
+        <li>flight_number: <strong><%= air_post.flight_number %></strong></li>
+        <li>arrival_date_time: <strong><%= air_post.arrival_date_time %></strong></li>
+        <li>departure_date_time: <strong><%= air_post.departure_date_time %></strong></li>
+        <li>departure_airport: <strong><%= air_post.departure_airport %></strong></li>
+        <li>arrival_airport: <strong><%= air_post.arrival_airport %></strong></li>
+        </ul>
+         <%= link_to 'VIEW', air_post, class: "btn btn-primary btn-lg" %>
+         <%= link_to 'Edit', edit_air_post_path(air_post), class: "btn btn-default btn-sm"  %>
+         <%= link_to 'Destroy', air_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+<hr>
+<br><br>
+<div class="container">
+  <div class="paginator">
+    <%= will_paginate @air_posts%>
+  </div>
+</div>
+

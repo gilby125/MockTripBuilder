@@ -1,0 +1,1 @@
+json.partial! "air_posts/air_post", air_post: @air_post
