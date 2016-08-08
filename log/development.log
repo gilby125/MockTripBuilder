@@ -3819,3 +3819,187 @@ Processing by AirPostsController#show as HTML
   [1m[36mAirPost Load (0.2ms)[0m  [1mSELECT  "air_posts".* FROM "air_posts" WHERE "air_posts"."id" = $1 LIMIT 1[0m  [["id", 11]]
   Rendered air_posts/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 13:50:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSiteDataToAirPost (20160808184736)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mALTER TABLE "air_posts" ADD "gt_site_name" character varying[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "air_posts" ADD "gt_sub_site_name" character varying
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160808184736"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'air_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2016-08-08 13:51:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 285ms (Views: 276.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-4c6d7dba0077efdeb3a8227bbdb701a6f978c1100b63ef149e1a25c4fed220ff.css?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/air_posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/application.self-942a47b453f07cb351f3eb908c2031fa90c180be5d1b004b791779b23790eb3b.css?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/air_posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-08 13:51:45 -0500
+
+
+Started GET "/air_posts" for ::1 at 2016-08-08 13:51:48 -0500
+Processing by AirPostsController#index as HTML
+Filter chain halted as #<Proc:0x007fa4dc0100f8@/Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/air_posts" for ::1 at 2016-08-08 13:51:50 -0500
+Processing by AirPostsController#index as HTML
+Filter chain halted as #<Proc:0x007fa4dc0100f8@/Users/keenansturtevant/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/air_posts" for ::1 at 2016-08-08 13:51:59 -0500
+Processing by AirPostsController#index as HTML
+  [1m[35mAirPost Load (2.3ms)[0m  SELECT  "air_posts".* FROM "air_posts"  ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "air_posts"[0m
+  Rendered air_posts/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 86ms (Views: 77.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/air_posts/11" for ::1 at 2016-08-08 13:52:02 -0500
+Processing by AirPostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mAirPost Load (0.3ms)[0m  SELECT  "air_posts".* FROM "air_posts" WHERE "air_posts"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered air_posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/air_posts/new" for ::1 at 2016-08-08 13:52:06 -0500
+Processing by AirPostsController#new as HTML
+  Rendered air_posts/_form.html.erb (16.7ms)
+  Rendered air_posts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/air_posts" for ::1 at 2016-08-08 13:52:18 -0500
+Processing by AirPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUXc6vF/PF1exDItPGOL1GVfOj/Etc0WzoCX2WEp9a4QFkxZzc4nibfnuOoktTeGP9g08grl4wNYsqb2NXuBmA==", "air_post"=>{"email_address"=>"1", "itinerary_reference"=>"1", "name"=>"1", "airline_code"=>"1", "confirmation_number"=>"1", "flight_number"=>"1", "departure_airport"=>"1", "arrival_airport"=>"1", "departure_date_time"=>"1", "arrival_date_time"=>"1", "gt_site_name"=>"1", "gt_sub_site_name"=>"1"}, "commit"=>"Create XML"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "air_posts" ("email_address", "itinerary_reference", "name", "airline_code", "confirmation_number", "flight_number", "arrival_date_time", "departure_date_time", "departure_airport", "arrival_airport", "gt_site_name", "gt_sub_site_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["email_address", "1"], ["itinerary_reference", "1"], ["name", "1"], ["airline_code", "1"], ["confirmation_number", "1"], ["flight_number", "1"], ["arrival_date_time", "1"], ["departure_date_time", "1"], ["departure_airport", "1"], ["arrival_airport", "1"], ["gt_site_name", "1"], ["gt_sub_site_name", "1"], ["created_at", "2016-08-08 18:52:18.134227"], ["updated_at", "2016-08-08 18:52:18.134227"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/air_posts/12
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/air_posts/12" for ::1 at 2016-08-08 13:52:18 -0500
+Processing by AirPostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mAirPost Load (0.3ms)[0m  SELECT  "air_posts".* FROM "air_posts" WHERE "air_posts"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered air_posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)

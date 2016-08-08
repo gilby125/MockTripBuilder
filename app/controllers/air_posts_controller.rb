@@ -70,6 +70,6 @@ class AirPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def air_post_params
-      params[:air_post].permit(:email_address, :itinerary_reference, :name, :airline_code, :confirmation_number, :flight_number, :arrival_date_time, :departure_date_time, :departure_airport, :arrival_airport)
+      params[:air_post].permit(:email_address, :itinerary_reference, :name, :airline_code, :confirmation_number, :flight_number, :arrival_date_time, :departure_date_time, :departure_airport, :arrival_airport, :gt_site_name, :gt_sub_site_name)
     end
 end

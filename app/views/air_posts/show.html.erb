@@ -10,7 +10,7 @@
 <ImportItineraryRequest xmlns="http://tripcase.com/api/partner" UserEmail="<%= @air_post.email_address %>" Version="1.0">
  <PartnerCredentials AuthToken="773ab4aa78f00de5e9401573e41bc8809a65cf6fd3f964bcfd56e322edf276363d338930132270d7a513925ec90fae6c01894cbe61236e8ffa5cf5866dd3d1f3" />
  <Itinerary Reference="<%= @air_post.itinerary_reference %>"
-            ReferenceTerm="GT Trip Id" Name="<%= @air_post.name %>" GTSiteName="sample site" GTSubsiteName="sample subsite" ClientId="CID002">
+            ReferenceTerm="GT Trip Id" Name="<%= @air_post.name %>" GTSiteName="<%= @air_post.gt_site_name %>" GTSubsiteName="<%= @air_post.gt_sub_site_name %>" ClientId="CID002">
    <Air AirlineCode="<%= @air_post.airline_code %>" ConfirmationNumber="<%= @air_post.confirmation_number %>" FlightNumber="<%= @air_post.flight_number %>" ArrivalDateTime="<%= @air_post.arrival_date_time %>" DepartureDateTime="<%= @air_post.departure_date_time %>">
      <DepartureAirport Code="<%= @air_post.departure_airport %>"/>
      <ArrivalAirport Code="<%= @air_post.arrival_airport %>"/>
