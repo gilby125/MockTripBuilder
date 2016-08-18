@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :rails
+  resources :car_rentals
+  resources :ferries
+  resources :cruises
+  resources :ground_transportations
+  resources :activities
+  resources :meetings
+  resources :food_drinks
+  resources :manual_lodgings
+  resources :sabre_lodgings
+  resources :attractions
   root 'posts#index'
   resources :air_posts
   resources :posts

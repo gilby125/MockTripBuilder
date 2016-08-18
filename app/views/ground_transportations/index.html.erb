@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ground Transportations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email address</th>
+      <th>Itinerary reference</th>
+      <th>Reference term</th>
+      <th>Name</th>
+      <th>Confirmation number</th>
+      <th>Item name</th>
+      <th>Start date time</th>
+      <th>End date time</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Street address</th>
+      <th>Zip code</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ground_transportations.each do |ground_transportation| %>
+      <tr>
+        <td><%= ground_transportation.email_address %></td>
+        <td><%= ground_transportation.itinerary_reference %></td>
+        <td><%= ground_transportation.reference_term %></td>
+        <td><%= ground_transportation.name %></td>
+        <td><%= ground_transportation.confirmation_number %></td>
+        <td><%= ground_transportation.item_name %></td>
+        <td><%= ground_transportation.start_date_time %></td>
+        <td><%= ground_transportation.end_date_time %></td>
+        <td><%= ground_transportation.city %></td>
+        <td><%= ground_transportation.state %></td>
+        <td><%= ground_transportation.country %></td>
+        <td><%= ground_transportation.street_address %></td>
+        <td><%= ground_transportation.zip_code %></td>
+        <td><%= ground_transportation.lat %></td>
+        <td><%= ground_transportation.long %></td>
+        <td><%= link_to 'Show', ground_transportation %></td>
+        <td><%= link_to 'Edit', edit_ground_transportation_path(ground_transportation) %></td>
+        <td><%= link_to 'Destroy', ground_transportation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ground transportation', new_ground_transportation_path %>

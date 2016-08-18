@@ -1,0 +1,1 @@
+json.partial! "sabre_lodgings/sabre_lodging", sabre_lodging: @sabre_lodging

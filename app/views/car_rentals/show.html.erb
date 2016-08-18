@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<xmp>
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportItineraryRequest xmlns="http://tripcase.com/api/partner" UserEmail="<%= @car_rental.email_address%>" Version="1.0">
+ <PartnerCredentials AuthToken="773ab4aa78f00de5e9401573e41bc8809a65cf6fd3f964bcfd56e322edf276363d338930132270d7a513925ec90fae6c01894cbe61236e8ffa5cf5866dd3d1f3" />
+ <Itinerary Reference="<%= @car_rental.itinerary_reference %>" ReferenceTerm="<%= @car_rental.reference_term %>" Name="<%= @car_rental.name %>">  
+    <TourEvent Type="vehicle" Name="<%= @car_rental.name %>" ConfirmationNumber="<%= @car_rental.confirmation_number %>">
+      <TourStop StartDateTime="<%= @car_rental.start_date_time %>" EndDateTime="<%= @car_rental.end_date_time %>">
+        <Location>
+          <LocationReference Type="car_rental" Context="<%= @car_rental.context %>" Reference="<%= @car_rental.reference %>" />
+        </Location>
+      </TourStop>
+      <TourStop StartDateTime="<%= @car_rental.start_date_two %>" EndDateTime="<%= @car_rental.end_date_two %>">
+        <Location>
+          <LocationReference Type="car_rental" Context="<%= @car_rental.context_two %>" Reference="<%= @car_rental.reference_two %>" />
+        </Location>
+      </TourStop>
+    </TourEvent>
+ </Itinerary>
+</ImportItineraryRequest>
+</xmp>
+
+<%= link_to 'Edit', edit_car_rental_path(@car_rental) %> |
+<%= link_to 'Back', car_rentals_path %>

@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @cruise.email_address %>
+</p>
+
+<p>
+  <strong>Itinerary reference:</strong>
+  <%= @cruise.itinerary_reference %>
+</p>
+
+<p>
+  <strong>Reference term:</strong>
+  <%= @cruise.reference_term %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cruise.name %>
+</p>
+
+<p>
+  <strong>Confirmation number:</strong>
+  <%= @cruise.confirmation_number %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @cruise.item_name %>
+</p>
+
+<p>
+  <strong>Start date time:</strong>
+  <%= @cruise.start_date_time %>
+</p>
+
+<p>
+  <strong>End date time:</strong>
+  <%= @cruise.end_date_time %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @cruise.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @cruise.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @cruise.country %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @cruise.street_address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @cruise.zip_code %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @cruise.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @cruise.long %>
+</p>
+
+<%= link_to 'Edit', edit_cruise_path(@cruise) %> |
+<%= link_to 'Back', cruises_path %>

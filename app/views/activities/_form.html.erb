@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="container">
+<%= form_for(@activity) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+        <div class="col-lg-4">
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerary_reference %><br>
+    <%= f.text_field :itinerary_reference, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_term %><br>
+    <%= f.text_field :reference_term, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :confirmation_number %><br>
+    <%= f.text_field :confirmation_number, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date_time %><br>
+    <%= f.text_field :start_date_time, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date_time %><br>
+    <%= f.text_field :end_date_time, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_field :street_address, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code, class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>
+</div>
+<% end %>
+    </div>
+  </div>
+</div>

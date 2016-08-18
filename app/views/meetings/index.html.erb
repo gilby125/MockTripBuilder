@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meetings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email address</th>
+      <th>Itinerary reference</th>
+      <th>Reference term</th>
+      <th>Name</th>
+      <th>Confirmation number</th>
+      <th>Item name</th>
+      <th>Start date time</th>
+      <th>End date time</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Street address</th>
+      <th>Zip code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meetings.each do |meeting| %>
+      <tr>
+        <td><%= meeting.email_address %></td>
+        <td><%= meeting.itinerary_reference %></td>
+        <td><%= meeting.reference_term %></td>
+        <td><%= meeting.name %></td>
+        <td><%= meeting.confirmation_number %></td>
+        <td><%= meeting.item_name %></td>
+        <td><%= meeting.start_date_time %></td>
+        <td><%= meeting.end_date_time %></td>
+        <td><%= meeting.city %></td>
+        <td><%= meeting.state %></td>
+        <td><%= meeting.country %></td>
+        <td><%= meeting.street_address %></td>
+        <td><%= meeting.zip_code %></td>
+        <td><%= link_to 'Show', meeting %></td>
+        <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meeting', new_meeting_path %>

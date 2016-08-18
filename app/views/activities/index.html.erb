@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  --------->
+  <%= link_to 'New Activity', new_activity_path, class: "btn btn-info btn-lg"  %>
+  <---------
+</div>
+<div class="container">
+  <h1>Listing Activities</h1>
+</div>
+<% @activities.each do |activity| %>
+<div class="col-lg-8">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        Activity ID: <strong><%= activity.id %></strong>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <li>email_address: <strong><%= activity.email_address %></strong></li>
+        <li>itinerary_reference: <strong><%= activity.itinerary_reference %></strong></li>
+        <li>reference_term: <strong><%= activity.reference_term %></strong></li>
+        <li>name: <strong><%= activity.name %></strong></li>
+        <li>confirmation_number: <strong><%= activity.confirmation_number %></strong></li>
+        <li>item_name: <strong><%= activity.item_name %></strong></li>
+        <li>start_date_time: <strong><%= activity.start_date_time %></strong></li>
+        <li>end_date_time: <strong><%= activity.end_date_time %></strong></li>
+        <li>city: <strong><%= activity.city %></strong></li>
+        <li>state: <strong><%= activity.state %></strong></li>
+        <li>country: <strong><%= activity.country %></strong></li>
+        <li>street_address: <strong><%= activity.street_address %></strong></li>
+        <li>zip_code: <strong><%= activity.zip_code %></strong></li>
+        <%= link_to 'Show', activity, class: "btn btn-info btn-sm" %>
+        <%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-default btn-sm" %>
+        <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+      </ul>
+    </div>
+  </div>
+</div>
+<% end %>

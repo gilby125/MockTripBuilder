@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cruises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email address</th>
+      <th>Itinerary reference</th>
+      <th>Reference term</th>
+      <th>Name</th>
+      <th>Confirmation number</th>
+      <th>Item name</th>
+      <th>Start date time</th>
+      <th>End date time</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Street address</th>
+      <th>Zip code</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cruises.each do |cruise| %>
+      <tr>
+        <td><%= cruise.email_address %></td>
+        <td><%= cruise.itinerary_reference %></td>
+        <td><%= cruise.reference_term %></td>
+        <td><%= cruise.name %></td>
+        <td><%= cruise.confirmation_number %></td>
+        <td><%= cruise.item_name %></td>
+        <td><%= cruise.start_date_time %></td>
+        <td><%= cruise.end_date_time %></td>
+        <td><%= cruise.city %></td>
+        <td><%= cruise.state %></td>
+        <td><%= cruise.country %></td>
+        <td><%= cruise.street_address %></td>
+        <td><%= cruise.zip_code %></td>
+        <td><%= cruise.lat %></td>
+        <td><%= cruise.long %></td>
+        <td><%= link_to 'Show', cruise %></td>
+        <td><%= link_to 'Edit', edit_cruise_path(cruise) %></td>
+        <td><%= link_to 'Destroy', cruise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cruise', new_cruise_path %>

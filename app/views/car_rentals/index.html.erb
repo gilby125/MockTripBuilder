@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <%= link_to 'New Car rental', new_car_rental_path, class: "btn btn-info btn-lg"  %>
+</div>
+
+<div class="container">
+  <h1>Listing Car Rentals</h1>
+</div>
+
+    <% @car_rentals.each do |car_rental| %>
+<div class="col-lg-8">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        Car Rental ID: <strong><%= car_rental.id %></strong>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <li>email_address: <%= car_rental.email_address %></li>
+        <li>itinerary_reference: <%= car_rental.itinerary_reference %></li>
+        <li>reference_term: <%= car_rental.reference_term %></li>
+        <li>name: <%= car_rental.name %></li>
+        <li>confirmation_number: <%= car_rental.confirmation_number %></li>
+        <li>item_name: <%= car_rental.item_name %></li>
+        <li>start_date_time: <%= car_rental.start_date_time %></li>
+        <li>end_date_time: <%= car_rental.end_date_time %></li>
+        <li>city: <%= car_rental.city %></li>
+        <li>state: <%= car_rental.state %></li>
+        <li>country: <%= car_rental.country %></li>
+        <li>street_address: <%= car_rental.street_address %></li>
+        <li>zip_code: <%= car_rental.zip_code %></li>
+        <li>lat: <%= car_rental.lat %></li>
+        <li>long: <%= car_rental.long %></li>
+        <li>context: <%= car_rental.context %></li>
+        <li>reference: <%= car_rental.reference %></li>
+        <li>start_date_two: <%= car_rental.start_date_two %></li>
+        <li>end_date_two: <%= car_rental.end_date_two %></li>
+        <li>context_two: <%= car_rental.context_two %></li>
+        <li>reference_two: <%= car_rental.reference_two %></li>
+        <%= link_to 'Show', car_rental, class: "btn btn-info btn-sm" %>
+        <%= link_to 'Edit', edit_car_rental_path(car_rental), class: "btn btn-default btn-sm" %>
+        <%= link_to 'Destroy', car_rental, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+      </ul>
+    </div>
+  </div>
+</div>
+    <% end %>

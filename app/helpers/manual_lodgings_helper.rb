@@ -1,0 +1,2 @@
+module ManualLodgingsHelper
+end

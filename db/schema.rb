@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808184736) do
+ActiveRecord::Schema.define(version: 20160815152326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "air_posts", force: :cascade do |t|
     t.string   "email_address"
@@ -33,6 +51,164 @@ ActiveRecord::Schema.define(version: 20160808184736) do
     t.string   "gt_sub_site_name"
   end
 
+  create_table "attractions", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "car_rentals", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "lat"
+    t.string   "long"
+    t.string   "context"
+    t.string   "reference"
+    t.string   "start_date_two"
+    t.string   "end_date_two"
+    t.string   "context_two"
+    t.string   "reference_two"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "cruises", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "lat"
+    t.string   "long"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "ferries", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "lat"
+    t.string   "long"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "food_drinks", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "ground_transportations", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "lat"
+    t.string   "long"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "manual_lodgings", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "airport_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "email_address"
     t.string   "itinerary_reference"
@@ -44,6 +220,50 @@ ActiveRecord::Schema.define(version: 20160808184736) do
     t.string   "departure_date_time"
     t.string   "departure_airport"
     t.string   "arrival_airport"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "rails", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "lat"
+    t.string   "long"
+    t.string   "context"
+    t.string   "reference"
+    t.string   "start_date_two"
+    t.string   "end_date_two"
+    t.string   "context_two"
+    t.string   "reference_two"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "sabre_lodgings", force: :cascade do |t|
+    t.string   "email_address"
+    t.string   "itinerary_reference"
+    t.string   "reference_term"
+    t.string   "name"
+    t.string   "confirmation_number"
+    t.string   "item_name"
+    t.string   "start_date_time"
+    t.string   "end_date_time"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "street_address"
+    t.string   "airport_code"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

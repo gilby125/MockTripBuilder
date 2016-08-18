@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Manual Lodgings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email address</th>
+      <th>Itinerary reference</th>
+      <th>Reference term</th>
+      <th>Name</th>
+      <th>Confirmation number</th>
+      <th>Item name</th>
+      <th>Start date time</th>
+      <th>End date time</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Street address</th>
+      <th>Airport code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manual_lodgings.each do |manual_lodging| %>
+      <tr>
+        <td><%= manual_lodging.email_address %></td>
+        <td><%= manual_lodging.itinerary_reference %></td>
+        <td><%= manual_lodging.reference_term %></td>
+        <td><%= manual_lodging.name %></td>
+        <td><%= manual_lodging.confirmation_number %></td>
+        <td><%= manual_lodging.item_name %></td>
+        <td><%= manual_lodging.start_date_time %></td>
+        <td><%= manual_lodging.end_date_time %></td>
+        <td><%= manual_lodging.city %></td>
+        <td><%= manual_lodging.state %></td>
+        <td><%= manual_lodging.country %></td>
+        <td><%= manual_lodging.street_address %></td>
+        <td><%= manual_lodging.airport_code %></td>
+        <td><%= link_to 'Show', manual_lodging %></td>
+        <td><%= link_to 'Edit', edit_manual_lodging_path(manual_lodging) %></td>
+        <td><%= link_to 'Destroy', manual_lodging, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manual lodging', new_manual_lodging_path %>

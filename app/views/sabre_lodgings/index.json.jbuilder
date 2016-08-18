@@ -1,0 +1,1 @@
+json.array! @sabre_lodgings, partial: 'sabre_lodgings/sabre_lodging', as: :sabre_lodging

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @meeting.email_address %>
+</p>
+
+<p>
+  <strong>Itinerary reference:</strong>
+  <%= @meeting.itinerary_reference %>
+</p>
+
+<p>
+  <strong>Reference term:</strong>
+  <%= @meeting.reference_term %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @meeting.name %>
+</p>
+
+<p>
+  <strong>Confirmation number:</strong>
+  <%= @meeting.confirmation_number %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @meeting.item_name %>
+</p>
+
+<p>
+  <strong>Start date time:</strong>
+  <%= @meeting.start_date_time %>
+</p>
+
+<p>
+  <strong>End date time:</strong>
+  <%= @meeting.end_date_time %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @meeting.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @meeting.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @meeting.country %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @meeting.street_address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @meeting.zip_code %>
+</p>
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', meetings_path %>

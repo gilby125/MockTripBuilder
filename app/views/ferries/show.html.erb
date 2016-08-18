@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @ferry.email_address %>
+</p>
+
+<p>
+  <strong>Itinerary reference:</strong>
+  <%= @ferry.itinerary_reference %>
+</p>
+
+<p>
+  <strong>Reference term:</strong>
+  <%= @ferry.reference_term %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ferry.name %>
+</p>
+
+<p>
+  <strong>Confirmation number:</strong>
+  <%= @ferry.confirmation_number %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @ferry.item_name %>
+</p>
+
+<p>
+  <strong>Start date time:</strong>
+  <%= @ferry.start_date_time %>
+</p>
+
+<p>
+  <strong>End date time:</strong>
+  <%= @ferry.end_date_time %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @ferry.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @ferry.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @ferry.country %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @ferry.street_address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @ferry.zip_code %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @ferry.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @ferry.long %>
+</p>
+
+<%= link_to 'Edit', edit_ferry_path(@ferry) %> |
+<%= link_to 'Back', ferries_path %>

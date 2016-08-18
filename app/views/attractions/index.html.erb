@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <%= link_to 'New Attraction', new_attraction_path, class: "btn btn-info btn-lg"  %>
+</div>
+
+<div class="container">
+  <h1>Listing Attractions</h1>
+</div>
+
+<% @attractions.each do |attraction| %>
+<div class="col-lg-8">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        Activity ID: <strong><%= attraction.id %></strong>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <li>email_address: <strong><%= attraction.email_address %></strong></li>
+        <li>itinerary_reference: <strong><%= attraction.itinerary_reference %></strong></li>
+        <li>reference_term: <strong><%= attraction.reference_term %></strong></li>
+        <li>name: <strong><%= attraction.name %></strong></li>
+        <li>confirmation_number: <strong><%= attraction.confirmation_number %></strong></li>
+        <li>item_name: <strong><%= attraction.item_name %></strong></li>
+        <li>start_date_time: <strong><%= attraction.start_date_time %></strong></li>
+        <li>end_date_time: <strong><%= attraction.end_date_time %></strong></li>
+        <li>city: <strong><%= attraction.city %></strong></li>
+        <li>state: <strong><%= attraction.state %></strong></li>
+        <li>country: <strong><%= attraction.country %></strong></li>
+        <li>street_address: <strong><%= attraction.street_address %></strong></li>
+        <li>zip_code: <strong><%= attraction.zip_code %></strong></li>
+        <%= link_to 'Show', attraction, class: "btn btn-info btn-sm" %>
+        <%= link_to 'Edit', edit_attraction_path(attraction), class: "btn btn-default btn-sm" %>
+        <%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+      </ul>
+    </div>
+  </div>
+</div>
+<% end %>

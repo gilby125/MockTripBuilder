@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email_address: MyString
+  itinerary_reference: MyString
+  reference_term: MyString
+  name: MyString
+  confirmation_number: MyString
+  item_name: MyString
+  start_date_time: MyString
+  end_date_time: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  street_address: MyString
+  zip_code: MyString
+  lat: MyString
+  long: MyString
+  context: MyString
+  reference: MyString
+  start_date_two: MyString
+  end_date_two: MyString
+  context_two: MyString
+  reference_two: MyString
+
+two:
+  email_address: MyString
+  itinerary_reference: MyString
+  reference_term: MyString
+  name: MyString
+  confirmation_number: MyString
+  item_name: MyString
+  start_date_time: MyString
+  end_date_time: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  street_address: MyString
+  zip_code: MyString
+  lat: MyString
+  long: MyString
+  context: MyString
+  reference: MyString
+  start_date_two: MyString
+  end_date_two: MyString
+  context_two: MyString
+  reference_two: MyString

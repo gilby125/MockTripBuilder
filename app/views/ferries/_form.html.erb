@@ -1,0 +1,77 @@
+<%= form_for(@ferry) do |f| %>
+  <% if @ferry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ferry.errors.count, "error") %> prohibited this ferry from being saved:</h2>
+
+      <ul>
+      <% @ferry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerary_reference %><br>
+    <%= f.text_field :itinerary_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_term %><br>
+    <%= f.text_field :reference_term %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :confirmation_number %><br>
+    <%= f.text_field :confirmation_number %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date_time %><br>
+    <%= f.text_field :start_date_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date_time %><br>
+    <%= f.text_field :end_date_time %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_field :street_address %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :long %><br>
+    <%= f.text_field :long %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

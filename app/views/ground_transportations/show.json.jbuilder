@@ -1,0 +1,1 @@
+json.partial! "ground_transportations/ground_transportation", ground_transportation: @ground_transportation

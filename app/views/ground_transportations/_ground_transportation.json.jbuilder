@@ -1,0 +1,2 @@
+json.extract! ground_transportation, :id, :email_address, :itinerary_reference, :reference_term, :name, :confirmation_number, :item_name, :start_date_time, :end_date_time, :city, :state, :country, :street_address, :zip_code, :lat, :long, :created_at, :updated_at
+json.url ground_transportation_url(ground_transportation, format: :json)

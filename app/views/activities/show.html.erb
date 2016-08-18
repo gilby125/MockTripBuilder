@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+
+<xmp>
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportItineraryRequest xmlns="http://tripcase.com/api/partner" UserEmail="<%= @activity.email_address%>" Version="1.0">
+ <PartnerCredentials AuthToken="773ab4aa78f00de5e9401573e41bc8809a65cf6fd3f964bcfd56e322edf276363d338930132270d7a513925ec90fae6c01894cbe61236e8ffa5cf5866dd3d1f3" />
+ <Itinerary Reference="<%= @activity.itinerary_reference %>" ReferenceTerm="<%= @activity.reference_term %>" Name="<%= @activity.name %>">
+   <LocationEvent Type="activity" StartDateTime="<%= @activity.start_date_time %>" EndDateTime="<%= @activity.end_date_time %>" ConfirmationNumber="<%= @activity.confirmation_number %>">
+           <Location>
+                <Address City="<%= @activity.city %>" State="<%= @activity.state%>" Postal="<%= @activity.zip_code %>" Country="<%= @activity.country %>">
+                    <Line><%= @activity.street_address %></Line>
+                </Address>
+            </Location>
+        </LocationEvent>
+ </Itinerary>
+</ImportItineraryRequest>
+</xmp>
+
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

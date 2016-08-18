@@ -1,0 +1,1 @@
+json.array! @manual_lodgings, partial: 'manual_lodgings/manual_lodging', as: :manual_lodging
